@@ -109,7 +109,6 @@ The repo includes a `Procfile` (`web: node server.js`), so it can be deployed as
 
 - [Report.pdf](Report.pdf) – project report (abstract, architecture, methodology, implementation)
 - [PPT.pdf](PPT.pdf) – presentation slides
-- [Demo.wmv](Demo.wmv) – demo video
 
 ## Author
 
