@@ -1,0 +1,91 @@
+body{
+    background:#212529;   
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+}
+
+video {
+    -webkit-transform : rotateY(180deg); /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotateY(180deg);  /* IE 9 */
+    transform: rotateY(180deg); /* Standard syntax, Firefox 16+, IE 10+, Opera */
+}
+
+.embed-responsive .peerVideo {
+    position: fixed;
+    height: 100%;
+}  
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.embed-responsive .user{
+    -webkit-transform : translateY(35%) rotateY(180deg) scale(0.3,0.3); 
+    -ms-transform: translateY(35%) rotateY(180deg) scale(0.3,0.3); 
+    transform: translateY(35%) rotateY(180deg) scale(0.3,0.3); 
+    position: absolute;    
+    z-index: 9;
+}
+
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.speaker {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    overflow: hidden;
+    display: inline-block;
+    z-index: 1;
+    top: 0;
+    margin: 10px;
+  }
+  .speaker span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    background: #fff;
+    margin: 11px 0 0 2px;
+  }
+  .speaker span:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent #fff transparent transparent;
+    border-width: 10px 14px 10px 15px;
+    left: -13px;
+    top: 5px;
+  }
+  .speaker span:before {
+    transform: rotate(45deg);
+    border-radius: 0 50px 0 0;
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-style: double;
+    border-color: #fff;
+    border-width: 7px 7px 0 0;
+    left: 18px;
+    top: 8px;
+    transition: all 0.2s ease-out;
+  }
+  .speaker:hover span:before {
+    transform: scale(0.8) translate(-3px, 0) rotate(42deg);
+  }
+  .speaker.mute span:before {
+    transform: scale(0.5) translate(-15px, 0) rotate(36deg);
+    opacity: 0;
+  }
